@@ -1,9 +1,9 @@
 # Image Preprocessing for Immersed Boundary Method
 
 <div style="display: flex; flex-direction: row;">
-    <img src="figures/original.png" alt="Image 1" style="width: 300px; height: 300px;">
-    <img src="figures/porosity.png" alt="Image 1" style="width: 300px; height: 300px;">
-    <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 300px; height: 300px;">
+    <img src="figures/original.png" alt="Image 1" style="width: 200px; height: 200px;">
+    <img src="figures/porosity.png" alt="Image 1" style="width: 200px; height: 200px;">
+    <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 200px; height: 200px;">
 </div>
 
 In this notebook, general image processing techniques are employed on 2D images and subsequently applied to a numerical simulation program utilizing A new unified governing equation of flow incorporating immersed solid boundaries.
@@ -45,9 +45,9 @@ The following code block (the greyscale tester) conducts a test to convert an or
 ## Outline detection
 
 <div style="display: flex; flex-direction: row;">
-    <img src="figures/gray.png" alt="Image 1" style="width: 300px; height: 300px;">
-    <img src="figures/outline.png" alt="Image 1" style="width: 300px; height: 300px;">
-    <img src="figures/com.png" alt="Image 2" style="width: 300px; height: 300px;">
+    <img src="figures/gray.png" alt="Image 1" style="width: 200px; height: 200px;">
+    <img src="figures/outline.png" alt="Image 1" style="width: 200px; height: 200px;">
+    <img src="figures/com.png" alt="Image 2" style="width: 200px; height: 200px;">
 </div>
 
 Grayscale conversion of the original image enables contour detection through kernel operations. By combining the extracted contours with the original grayscale image, a contour-enhanced image is obtained.
