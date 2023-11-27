@@ -55,9 +55,9 @@ Grayscale conversion of the original image enables contour detection through ker
 ## SDF
 
 <div style="display: flex; flex-direction: row;">
-    <img src="figures/phi.png" alt="Image 1" style="width: 300px; height: 250px;">
-    <img src="figures/sd.png" alt="Image 1" style="width: 300px; height: 250px;">
-    <img src="figures/porosity_image.png" alt="Image 2" style="width: 300px; height: 250px;">
+    <img src="figures/phi.png" alt="Image 1" style="width: 200px; height: 160px;">
+    <img src="figures/sd.png" alt="Image 1" style="width: 200px; height: 160px;">
+    <img src="figures/porosity_image.png" alt="Image 2" style="width: 200px; height: 160px;">
 </div>
 
 First, perform binarization to make the interface clear. Then, calculate the Signed Distance Field (SDF) using the Fast Marching Method (FMM), and obtain the porosity distribution by applying the sigmoid function.
