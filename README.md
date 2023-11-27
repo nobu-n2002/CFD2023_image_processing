@@ -1,9 +1,9 @@
 # Image Preprocessing for Immersed Boundary Method
 
 <div style="display: flex; flex-direction: row;">
-    <img src="figures/original.png" alt="Image 1" style="width: 200px; height: 200px;">
-    <img src="figures/porosity.png" alt="Image 1" style="width: 200px; height: 200px;">
-    <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 200px; height: 200px;">
+    <img src="figures/original.png" alt="Image 1" style="width: 300px; height: 300px;">
+    <img src="figures/porosity.png" alt="Image 1" style="width: 300px; height: 300px;">
+    <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 300px; height: 300px;">
 </div>
 
 In this notebook, general image processing techniques are employed on 2D images and subsequently applied to a numerical simulation program utilizing A new unified governing equation of flow incorporating immersed solid boundaries.
@@ -41,6 +41,26 @@ Each pixel in the image has a specific RGB (Red, Green, Blue) value, where each 
 $$ \rm{Gray} = Red \times 0.229 + Green \times 0.587 + Blue \times 0.114 $$
 
 The following code block (the greyscale tester) conducts a test to convert an original BGR color (specified by user input) to grayscale by applying custom weights to each channel (B, G, R). Users can set these custom weights through sliders. The resulting grayscale intensity is calculated based on the specified weights, and the original and grayscale images are displayed side by side for visual comparison.
+
+## Outline detection
+
+<div style="display: flex; flex-direction: row;">
+    <img src="figures/gray.png" alt="Image 1" style="width: 300px; height: 300px;">
+    <img src="figures/outline.png" alt="Image 1" style="width: 300px; height: 300px;">
+    <img src="figures/com.png" alt="Image 2" style="width: 300px; height: 300px;">
+</div>
+
+Grayscale conversion of the original image enables contour detection through kernel operations. By combining the extracted contours with the original grayscale image, a contour-enhanced image is obtained.
+
+## SDF
+
+<div style="display: flex; flex-direction: row;">
+    <img src="figures/phi.png" alt="Image 1" style="width: 300px; height: 250px;">
+    <img src="figures/sd.png" alt="Image 1" style="width: 300px; height: 250px;">
+    <img src="figures/porosity_image.png" alt="Image 2" style="width: 300px; height: 250px;">
+</div>
+
+First, perform binarization to make the interface clear. Then, calculate the Signed Distance Field (SDF) using the Fast Marching Method (FMM), and obtain the porosity distribution by applying the sigmoid function.
 
 ## Resize
 
