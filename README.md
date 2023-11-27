@@ -1,9 +1,9 @@
 # Image Preprocessing for Immersed Boundary Method
 
 <div style="display: flex; flex-direction: row;">
-    <img src="figures/original.png" alt="Image 1" style="width: 300px; height: 300px;">
-    <img src="figures/porosity.png" alt="Image 1" style="width: 300px; height: 300px;">
-    <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 300px; height: 300px;">
+    <img src="figures/original.png" alt="Image 1" style="width: 200px; height: 200px;">
+    <img src="figures/porosity.png" alt="Image 1" style="width: 200px; height: 200px;">
+    <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 200px; height: 200px;">
 </div>
 
 In this notebook, general image processing techniques are employed on 2D images and subsequently applied to a numerical simulation program utilizing A new unified governing equation of flow incorporating immersed solid boundaries.
@@ -19,28 +19,17 @@ The user is solely responsible for understanding and managing the risks associat
 ## Basic equation
 
 Law of conservation of mass:
-$$
-\begin{align}
-\frac{\partial \rho \varepsilon}{\partial t}+\boldsymbol{\bigtriangledown} \cdot \rho \varepsilon \boldsymbol{u} = 0
-\end{align}
-$$
+$$\frac{\partial \rho \varepsilon}{\partial t}+\boldsymbol{\bigtriangledown} \cdot \rho \varepsilon \boldsymbol{u} = 0$$
 
 Law of conservation of momentum:
-$$
-\begin{align}
-\frac{\partial \rho \varepsilon \boldsymbol{u}}{\partial t}+\bigtriangledown \cdot \rho \varepsilon \boldsymbol{u} \boldsymbol{u}
-= -\varepsilon\bigtriangledown p + \bigtriangledown\cdot \varepsilon \boldsymbol{T} + \boldsymbol{f}\\
-\boldsymbol{T} = \mu(\bigtriangledown\boldsymbol{u}+\bigtriangledown\boldsymbol{u}^t)+\lambda (\bigtriangledown\cdot\boldsymbol{u})\boldsymbol{I}
-\end{align}
-$$
+$$\frac{\partial \rho \varepsilon \boldsymbol{u}}{\partial t}+\bigtriangledown \cdot \rho \varepsilon \boldsymbol{u} \boldsymbol{u}
+= -\varepsilon\bigtriangledown p + \bigtriangledown\cdot \varepsilon \boldsymbol{T} + \boldsymbol{f}$$
+
+$$\boldsymbol{T} = \mu(\bigtriangledown\boldsymbol{u}+\bigtriangledown\boldsymbol{u}^t)+\lambda (\bigtriangledown\cdot\boldsymbol{u})\boldsymbol{I}$$
 
 Defenition of porosity distribution:
 
-$$
-\begin{align}
-\displaystyle \varepsilon = \frac{1}{2} \tanh(x) + \frac{1}{2},  x = \frac{\xi}{\Delta}
-\end{align}
-$$
+$$\displaystyle \varepsilon = \frac{1}{2} \tanh(x) + \frac{1}{2},  x = \frac{\xi}{\Delta}$$
 where $\xi$ is a signed distance function.
 
 ### Grayscale
@@ -59,19 +48,19 @@ Resizing is done by the function `resize` of the OpenCV module. This function ca
 
 Therefore, in order to convert an image to an arbitrary resolution, it is sufficient to know this scale factor. Let $\rm{(W, H)}$ denote the number of pixels in the original image and $\rm{(W', H')}$ the number of pixels in the converted image. Resolution is the total number of pixels, so if the original resolution is $\rm{R}$, the following equation holds.
 
-$$ \rm{R} = WH$$.
+$$\rm{R} = WH$$
 
 Here, the number of pixels in the height and width of the converted image $\rm{(W', H')}$ is defined using the scale factor $s( > 0)$ and $\rm{(W, H)}$ as follows.
 
-$$ \rm{(W', H')} = (\textit{s}\rm{W}, \textit{s}\rm{H})$$.
+$$\rm{(W', H')} = (\textit{s}\rm{W}, \textit{s}\rm{H})$$
 
 This allows the transformed resolution $\rm{R'}$ to be expressed as follows.
 
-$$ \rm{R'} = W'H' = s^2\rm{WH} $$
+$$\rm{R'} = W'H' = s^2\rm{WH} $$
 
 Solving this for $s$, we obtain.
 
-$$ s = \sqrt{\frac{R'}{WH}} $$
+$$s = \sqrt{\frac{R'}{WH}} $$
 
 Therefore, given an arbitrary resolution, the coefficient $s$ can be obtained and resizing can be performed. Run the code block below and set the resolution by changing the slider bar of `resolution`. The last value you set will be the resolution used in the following program. The images are stored in the `tmp` folder.
 
