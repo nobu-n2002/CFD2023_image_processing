@@ -18,22 +18,6 @@ By using this code, you agree that the author shall not be liable for any direct
 
 The user is solely responsible for understanding and managing the risks associated with the use of this code. This disclaimer is subject to change without notice.
 
-## Basic equation
-
-Law of conservation of mass:
-$$\frac{\partial \rho \varepsilon}{\partial t}+\boldsymbol{\bigtriangledown} \cdot \rho \varepsilon \boldsymbol{u} = 0$$
-
-Law of conservation of momentum:
-$$\frac{\partial \rho \varepsilon \boldsymbol{u}}{\partial t}+\bigtriangledown \cdot \rho \varepsilon \boldsymbol{u} \boldsymbol{u}
-= -\varepsilon\bigtriangledown p + \bigtriangledown\cdot \varepsilon \boldsymbol{T} + \boldsymbol{f}$$
-
-$$\boldsymbol{T} = \mu(\bigtriangledown\boldsymbol{u}+\bigtriangledown\boldsymbol{u}^t)+\lambda (\bigtriangledown\cdot\boldsymbol{u})\boldsymbol{I}$$
-
-Defenition of porosity distribution:
-
-$$\displaystyle \varepsilon = \frac{1}{2} \tanh(x) + \frac{1}{2},  x = \frac{\xi}{\Delta}$$
-where $\xi$ is a signed distance function.
-
 ### Grayscale
 
 Grayscaling can be easily achieved by loading the previously resized image using OpenCV's `IMREAD_GRAYSCALE` function. Here, we explain the process that takes place within the image during the grayscaling process.
