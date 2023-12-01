@@ -6,7 +6,9 @@
     <img src="figures/velocityInFluid.png" alt="Image 2" style="width: 200px; height: 200px;">
 </div>
 
-In this notebook, general image processing techniques are employed on 2D images and subsequently applied to a numerical simulation program utilizing A new unified governing equation of flow incorporating immersed solid boundaries.
+## Overview
+
+This code introduces a novel approach to flow simulation using the new governing equations[1]. By processing pixel data such as images and 2D illustrations, it allows for straightforward execution of flow simulations around objects. 
 
 **Disclaimer: This code is provided for use in Google Colaboratory. The author assumes no responsibility for any damages arising from the use of this code.**
 
