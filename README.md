@@ -1,4 +1,4 @@
-# Image Preprocessing for Immersed Boundary Method
+# PixelFlow: Innovative Flow Simulation from Image Data
 
 <div style="display: flex; flex-direction: row;">
     <img src="figures/original.png" alt="Image 1" style="width: 200px; height: 200px;">
