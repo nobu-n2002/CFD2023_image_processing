@@ -72,6 +72,6 @@ Therefore, given an arbitrary resolution, the coefficient $s$ can be obtained an
 
 ## Reference
 
-[1] Oshima.N, A Novel approach for wall-boundary immersed flow simulation: proposal of modified Navier-Stokes equation, Mechanical Engineering Journal. Vol.18, No.4 (2023)
+[1] Oshima.N, A Novel approach for wall-boundary immersed flow simulation: proposal of modified Navier-Stokes equation, Journal of Fluid Science and Technology, Vol.18, No.4 (2023)
 
 [2] 大島, 流れの数値解析:固体境界が埋め込まれた改良ナビエ・ストークス方程式の解法, 北海道大学学術成果コレクション(HUBCAP), 資源タイプsoftware (2023), URL: [http://hdl.handle.net/2115/89344](http://hdl.handle.net/2115/89344)
