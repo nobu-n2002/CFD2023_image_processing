@@ -70,6 +70,10 @@ $$s = \sqrt{\frac{R'}{WH}} $$
 
 Therefore, given an arbitrary resolution, the coefficient $s$ can be obtained and resizing can be performed. Run the code block below and set the resolution by changing the slider bar of `resolution`. The last value you set will be the resolution used in the following program. The images are stored in the `tmp` folder.
 
+## Links
+
+Solver: [PixelFlow](https://github.com/nobu-n2002/PixelFlow)
+
 ## References
 
 [1] Oshima, N., A Novel approach for wall-boundary immersed flow simulation: proposal of modified Navier-Stokes equation, Journal of Fluid Science and Technology. Vol.18, No.4 (2023), 
